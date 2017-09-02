@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+.container{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: auto;
+}
+
+.left{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: left 4s linear infinite;
+  background-color: red;
+  border-right: 0 solid black;
+}
+@keyframes left{
+  0% {
+    width: 0;
+    height: 0;
+  }
+  12.5% {
+    width: 0;
+    height: calc(100% - 3px);
+  }
+  50% {
+    width: 0;
+    height: calc(100% - 3px);
+    border-right-width: 0px;
+  }
+  62.5% {
+    width: 20px;
+    height: calc(100% - 3px);
+    border-right-width: 3px;
+  }
+
+  100% {
+    width: 20px;
+    height: calc(100% - 3px);
+    border-right-width: 3px;
+  }
+}
+.top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  border-top: 3px solid black;
+  animation: top 4s linear infinite;
+}
+
+@keyframes top{
+  0% {
+    width: 0;
+  }
+  12.5% {
+    width: 0;
+  }
+  25% {
+    width: 100%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+.right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-right: 3px solid black;
+  border-left: 0 solid black;
+  animation: right 4s linear infinite;
+}
+
+@keyframes right{
+  0% {
+    width: 0;
+    height: 0;
+    border-left-width: 0;
+  }
+  25% {
+    width: 0;
+    height: 0;
+    border-left-width: 0;
+  }
+  37.5% {
+    width: 0;
+    height: 100%;
+    border-left-width: 0;
+  }
+  75%{
+    width: 0;
+    height: 100%;
+    border-left-width: 0;
+  }
+
+  87.5%{
+    width: 20px;
+    height: 100%;
+    border-left-width: 3px;
+  }
+
+  100% {
+    width: 20px;
+    height: 100%;
+    border-left-width: 3px;
+  }
+}
+
+.bottom{
+  position: absolute;
+  background-color: yellow;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  animation: bottom 4s linear infinite;
+  border-top: 0 solid black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  border-right-width: 0;
+}
+
+@keyframes bottom {
+  0% {
+    height: 0;
+    width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+  }
+  37.5% {
+    height: 0;
+    width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+  }
+  50%{
+    height: 0;
+    width: calc(100% - 3px);;
+    border-top-width: 0;
+    border-right-width: 3px;
+  }
+  62.5%{
+    height: 0;
+    width: calc(100% - 3px);;
+    border-top-width: 0;
+    border-right-width: 3px;
+  }
+  75%{
+    width: calc(100% - 3px);;
+    height: 20px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+  }
+  100% {
+    width: calc(100% - 3px);;
+    height: 20px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+  }
+}
+.caption{
+  margin: auto;
+  width: 100px;
+  text-align: center;
+  overflow-x: hidden;
+  animation: caption 4s infinite steps(1,end);
+  font-size: 20px;
+}
+
+@keyframes caption {
+  0%{
+    width: 74px;
+  }
+  25%{
+    width: 80px;
+  }
+  50%{
+    width: 86px;
+  }
+  75%{
+    width: 92px;
+  }
+  100%{
+    width: 92px;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+
+  <div class="right"></div>
+  <div class="bottom"></div>
+  <div class="left"></div>
+  <div class="top"></div>
+
+</div>
+<div class="caption">Loading...</div>
+
+</body>
+
+
+</html>
